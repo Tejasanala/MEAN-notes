@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        background-color: hsl(248, 21%, 93%);
+        place-content: center;
+        width: 320px;
+        margin: 200px;
+        border-radius: 20px;
+        overflow: hidden; /*the info which is over flowing outside the container is hidden*/
+        font-family: Roboto, sans-serif;
+        box-shadow: 4px 6px 8px 0px rgb(247, 246, 244);
+      }
+      .image {
+        width: 320px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+      }
+      .body {
+        background-color: whitesmoke;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .text {
+        padding-left: 20px;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <img src="india.png" class="image" />
+      <div class="text">
+        <h1>India</h1>
+
+        <p><big>Captial</big>: New delhi</p>
+        <p><big>Population</big> :1,394,975,829</p>
+        <p><big>Region </big>: Asia</p>
+      </div>
+    </div>
+
+    <script>
+      var text = document.createElement("div");
+      document.body.appendChild(text);
+
+      var x = document.createElement("img");
+      x.setAttribute("src", "india.png");
+      x.setAttribute("width", "304");
+      x.setAttribute("height", "228");
+      x.setAttribute("alt", "The Pulpit Rock");
+      document.body.appendChild(x);
+
+      const y = (document.getElementsByClassName("text")[0].innerText =
+        "India");
+
+      console.log(y[0].innerText);
+    </script>
+  </body>
+</html>

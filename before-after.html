@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        place-content: center;
+        display: grid;
+      }
+
+      .hobbies {
+        list-style: none;
+        font-size: 42px;
+      }
+      /*before and after are for decorative purpose- non selectable*/
+      .hobbies > li::before {
+        content: "Loves ";
+      }
+
+      .hobbies > li::after {
+        content: "😁";
+      }
+      /*css clip path maker*/
+    </style>
+  </head>
+  <body>
+    <ul class="hobbies">
+      <li>Cooking</li>
+      <li>Watching TV</li>
+      <li>Crafting</li>
+      <li>Painting</li>
+      <li>Dancing</li>
+    </ul>
+  </body>
+</html>

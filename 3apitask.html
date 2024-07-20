@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module ">
+           var cities = ["chennai", "madurai", "erode"];
+
+           const API_KEY ="f499a0c9e19c406281671339241907"
+
+      let P1 = fetch(
+        `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${cities[0]}&aqi=no`,
+        { mode: "cors" }
+      )
+        .then((res) => res.json())
+        .then((data) => [data?.location?.name, data?.current?.temp_c]);
+
+      let P2 = fetch(
+        `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${cities[1]}&aqi=no`,
+        { mode: "cors" }
+      )
+        .then((res) => res.json())
+        .then((data) => [data?.location?.name, data?.current?.temp_c]);
+
+      let P3 = fetch(
+        `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${cities[2]}&aqi=no`,
+        { mode: "cors" }
+      )
+        .then((res) => res.json())
+        .then((data) => [data?.location?.name, data?.current?.temp_c]);
+
+      Promise.all([P1, P2, P3])
+        .then((values) => Object.fromEntries(values))
+        .then((data) => console.log(data));
+    </script>
+  </body>
+</html>

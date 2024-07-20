@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        place-content: center;
+        display: grid;
+      }
+      h1 {
+        color: purple;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>10</h1>
+    <script>
+      //Callback hell - call back inside another callback
+      //iluminati triangle --> not prefered
+      /*
+      let i = 10;
+      setTimeout(function timeout() {
+        document.querySelector("h1").innerText = 9;
+        setTimeout(function timeout() {
+          document.querySelector("h1").innerText = 8;
+          setTimeout(function timeout() {
+            document.querySelector("h1").innerText = 7;
+            setTimeout(function timeout() {
+              document.querySelector("h1").innerText = 6;
+              setTimeout(function timeout() {
+                document.querySelector("h1").innerText = 5;
+                setTimeout(function timeout() {
+                  document.querySelector("h1").innerText = 4;
+                  setTimeout(function timeout() {
+                    document.querySelector("h1").innerText = 3;
+                    setTimeout(function timeout() {
+                      document.querySelector("h1").innerText = 2;
+                      setTimeout(function timeout() {
+                        document.querySelector("h1").innerText = 1;
+                        setTimeout(function timeout() {
+                          document.querySelector("h1").innerText =
+                            "Happy New Year";
+                        }, 1000);
+                      }, 1000);
+                    }, 1000);
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        }, 1000);
+      }, 1000);
+*/
+      //fetch()-it fetches the nearest friends of the particular person.
+      //in fetch() the retrival of data depends on the amount of info presentnor might be the internet speed,their database speed.
+      //whenever a fetch() is encountered in browser during exe then it goes to webAPI.
+
+      /*promises - asuring 
+
+pending
+fulfilled
+rejected
+
+promise.resolve(3) //promise is fulfilled 
+
+promise.rejected(3)//rejects and throws an error
+
+
+promise() is a constructor and will send 2 parameters into it.
+
+      let eligibilityTest = new Promise((resolve, reject) => {
+        let age = 20;
+        if (age >= 18) {
+          resolve("Yesssssss"); //if it is true it doesnt return anything we need to tell the promise wt to do so we use (then)....
+        } else {
+          reject("Try again after few years"); //will be getting an error.
+        }
+      });
+
+      //only when resolve happens then only .then() will call
+      eligibilityTest
+        .then((msg) => console.log("Congrats :" + msg))
+
+        //To handle the reject we use catch()
+        .catch((msg) => console.log("Oops :" + msg));
+
+      //.then() returns an another promise object .So, we can perform another operation on that .then()
+      eligibilityTest
+        .then((msg) => msg + "This is fun")
+        .then((msg) => console.log("Super cool :" + msg))
+        .then((msg) => console.log("Final :" + msg))
+        .catch((msg) => console.log("Oops :" + msg));
+      //console.log doesnt return anything it just prints
+
+Multiple Promises
+
+//Promise.all ,Promise.race
+*/
+      // Promise.allSettled();
+
+      console.log(typeof eligibilityTest); //object
+    </script>
+  </body>
+</html>

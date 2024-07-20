@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*combinators - child selectors(>)*/
+      .container > div {
+        background: teal;
+        border: 3px solid black;
+        display: grid;
+        height: 100px;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 1fr; /*1fr - 1fraction*/
+        /* grid-template-columns: repeat(
+          10,
+          1fr
+        ); to represent multiple number of grids by changing the count we can get the grids*/
+
+        /* grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));*/
+      }
+      /*To get into a particular format after a particular width*/
+      /*Where will we choose the break points like where to divide into two parts? -> Whenever our layout is getting conjusted or getting overlapped we will break them. */
+      /*Break points are the points where our layout are abruptly changes*/
+      @media (min-width: 300px) {
+        .container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  </body>
+</html>

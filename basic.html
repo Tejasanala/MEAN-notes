@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 20px;
+        display: grid;
+        place-content: center;
+        text-align: center;
+        background-color: hsla(233, 46%, 7%, 1);
+        font-family: "Inter", sans-serif;
+      }
+
+      .case {
+        background-color: hsl(245.81deg 38.27% 15.88%);
+        place-content: center;
+        width: 620px;
+        margin: 200px;
+        border-radius: 20px;
+        overflow: hidden; /*the info which is over flowing outside the container is hidden*/
+      }
+      .image {
+        border-radius: 20px;
+        background-color: hsl(277, 64%, 61%);
+        width: 620px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        /* overflow: auto; */
+      }
+      h1 {
+        color: hsl(0, 0%, 100%);
+        font-weight: 2000;
+        font-size: 65px;
+      }
+      .kim {
+        color: hsl(277, 64%, 61%);
+      }
+      h2 {
+        color: hsla(0, 0%, 100%, 0.6);
+        font-weight: 500;
+      }
+      .div {
+        place-content: center;
+        text-align: center;
+        color: hsla(0, 0%, 100%, 0.6);
+        line-height: 4vh;
+        font-size: 35px;
+        font-weight: 500;
+      }
+      @media (min-width: 600px) {
+        .case {
+          display: grid;
+          overflow: hidden;
+          grid-template-columns: 1fr;
+          margin: 100px;
+          /*grid-template-columns: 3fr;*/
+        }
+      }
+      @media (min-width: 1500px) {
+        .case {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="case">
+      <img src="image-header-mobile.jpg" alt="people talking" class="image" />
+
+      <h1>
+        Get <span class="kim">insights </span>that help your business grow.
+      </h1>
+      <div class="div">
+        <h4>
+          Discover the benifits of data analytics and make better decisions
+          regarding revenue,customer experience,and overall efficency.
+        </h4>
+      </div>
+      <div class="size">
+        <h1 style="margin: 0px; font-size: 56px">10k+</h1>
+        <h2>COMPANIES</h2>
+        <br />
+        <h1 style="margin: 0px; font-size: 56px">314</h1>
+        <h2>TEMPLATES</h2>
+        <br />
+        <h1 style="margin: 0px; font-size: 54px">12M+</h1>
+        <h2>QUERIES</h2>
+      </div>
+    </div>
+  </body>
+</html>

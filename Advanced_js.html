@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScript Is Wholesome..🤠</h1>
+    <h1>This not Fun!!!</h1>
+
+    <span id="highlight">Everyone loves Food</span>
+
+    <h2 class="fun">Hobbies</h2>
+    <h2 class="fun">Dreams</h2>
+    <p class="fun">Wow</p>
+
+    <ul class="languages">
+      <li>JS</li>
+      <li>SQL</li>
+    </ul>
+
+    <h3>Hobbies</h3>
+
+    <ul class="hobbies"></ul>
+
+    we can modify atributes in html
+
+    <input class="username" type="text" style="color: palevioletred" />
+
+    <script>
+      const headings = document.getElementsByTagName("h1");
+      console.log(headings[0].innerText); //reading the values
+
+      /*it only prints the innertext without showing the tag*/
+      /*To update a tag*/
+
+      headings[0].innerText = "JavaScript is Awesome...🐱‍👤"; //update
+
+      const reference = document.getElementsByClassName("fun");
+      console.log(reference[2].innerText);
+      reference[2].innerText = "SuperCool🥶";
+
+      console.log(document.getElementById("highlight").innerText);
+
+      //instead of using these three tags we can use queryselector
+      //But the query selector returns only one element ...so to get text at particular index we use queryselector all.
+      //still we use those three tags(id,class,tag) to support the old web applications.
+
+      console.log(document.querySelector("h1").innerText);
+
+      console.log(document.querySelector("#highlight").innerText);
+
+      console.log(document.querySelector(".fun").innerText);
+
+      console.log(document.querySelectorAll(".fun")[2].innerText);
+
+      //Now, to add a new tag below the paragraph tag we use createelements
+      const add = document.createElement("h3");
+      add.innerText = "This is RainySeason🌂";
+      //if we run the above code it doesnt print anything coz we didnt mention where it should print.
+      document.querySelector("body").append(add);
+
+      console.log(document.querySelector(".languages").innerText); //JS SQL
+      console.log(document.querySelector(".languages").innerHTML); //<li>JS</li> <li>SQL</li>
+      //in innerhtml it creates a text and attaches to parent DOM.
+      /*console.log(
+        (document.querySelector(".hobbies").innerHTML = <li>Yahoo</li>)
+      );
+*/
+      const hobbiesData = [
+        "Reading",
+        "Painting",
+        "Photography",
+        "Hiking",
+        "Gardening",
+        "Cooking",
+        "Playing musical instruments",
+        "Dancing",
+        "Traveling",
+        "Knitting",
+      ];
+
+      document.querySelector(".hobbies").innerHTML = hobbiesData
+        .map((hobby) => `<li>${hobby}</li>`)
+        .join(" ");
+
+      document
+        .querySelector(".username")
+        .setAttribute("placeholder", "Enter Your Name");
+
+      document
+        .querySelector(".username")
+        .setAttribute("style", "color : green");
+    </script>
+  </body>
+</html>

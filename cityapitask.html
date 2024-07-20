@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+      /*
+      //here we created a async function becoz we need to create promises
+      async function getTempofcity(name) {
+        const read = await fetch(
+          `https://api.weatherapi.com/v1/current.json?key=f499a0c9e19c406281671339241907&q=${name}&aqi=no`
+        );
+        let consider = await read.json();
+        const r = [consider?location?.name  .onsider?.current?.temp_c];
+
+        return r;
+      }
+      const city = getTempofcity("chennai");
+      const e = getTempofcity("madurai");
+      const y = getTempofcity("erode");
+
+
+      const value = Promise.all([city, e, y])
+        .then((error) => Object.fromEntries(error))
+        .then((data) => console.log(data));
+        */
+
+      //All async functions returns promise objects.
+
+      var cities = ["chennai", "erode", " madurai"];
+
+      const API_KEY = "f499a0c9e19c406281671339241907";
+
+      async function getTempOfCity(city) {
+        const res = await fetch(
+          `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`,
+          { mode: "cors" }
+        );
+        const data = await res.json();
+        return [data?.location?.name, data?.current?.temp_c];
+      }
+
+      // cities -> Array of strings ->  [P1, P2, P3] -> Array of promises
+      await Promise.all(cities.map(getTempOfCity))
+        .then(Object.fromEntries) //directly adding to object.fromentries
+        .then((data) => console.log(data));
+    </script>
+  </body>
+</html>

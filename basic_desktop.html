@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 20px;
+        min-height: 100vh;
+        display: grid;
+        place-content: center;
+        background-color: hsla(233, 46%, 7%, 1);
+        font-family: "Inter", sans-serif;
+      }
+
+      .case {
+        background-color: hsl(245.81deg 38.27% 15.88%);
+        border-radius: 20px;
+        overflow: hidden; /*the info which is over flowing outside the container is hidden*/
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      .image {
+        border-radius: 20px;
+        background: url("image-header-mobile.jpg") violet;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-size: cover;
+        border-bottom-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        overflow: auto;
+        width: 1100px;
+      }
+      /*max-width - it will not go beyond the max width*/
+      /*we can use margin-top : auto only if we r using all of the items in flex;*/
+      h1 {
+        color: hsl(0, 0%, 100%);
+        font-weight: 2000;
+        font-size: 90px;
+        max-width: 1000px;
+      }
+      .kim {
+        color: hsl(277, 64%, 61%);
+      }
+      h2 {
+        color: hsla(0, 0%, 100%, 0.6);
+        font-weight: 500;
+      }
+      .div {
+        text-align: left;
+        color: hsla(0, 0%, 100%, 0.6);
+        line-height: 4vh;
+        font-size: 35px;
+        font-weight: 500;
+        max-width: 820px;
+      }
+      .size {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 150px;
+        gap: 90px;
+      }
+      .well {
+        max-width: 1100px;
+        margin-top: 100px;
+        padding-left: 160px;
+        padding-right: 100px;
+        padding-bottom: 30px;
+      }
+      @media (min-width: 200px) {
+        .case {
+          display: grid;
+          overflow: hidden;
+          grid-template-columns: 1fr;
+          object-fit: cover;
+          margin-top: 30px;
+
+          /*grid-template-columns: 3fr;*/
+        }
+      }
+      @media (min-width: 1500px) {
+        .case {
+          display: flex;
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="case">
+        <div class="image"></div>
+        <div class="well">
+          <h1>
+            Get <span class="kim">insights </span>that help your business grow.
+          </h1>
+
+          <div class="div">
+            <h4>
+              Discover the benifits of data analytics and make better decisions
+              regarding revenue,customer experience,and overall efficency.
+            </h4>
+          </div>
+          <div class="size">
+            <div>
+              <h1 style="margin: 0px; font-size: 56px">10k+</h1>
+              <h2>COMPANIES</h2>
+            </div>
+            <div>
+              <h1 style="margin: 0px; font-size: 56px">314</h1>
+              <h2>TEMPLATES</h2>
+            </div>
+            <div>
+              <h1 style="margin: 0px; font-size: 54px">12M+</h1>
+              <h2>QUERIES</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
