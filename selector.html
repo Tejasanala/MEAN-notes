@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      .ticks {
+        font-family: Roboto, sans-serif;
+        /*Size and color of svg*/
+        font-size: 30px;
+        color: plum;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        place-content: center;
+        display: grid;
+      }
+      /*
+      .hobbies > li:nth-child(1) {
+        color: crimson;
+      }
+
+      .hobbies > li:nth-child(2) {
+        color: teal;
+      }
+
+      .hobbies > li:nth-child(3) {
+        color: seagreen;
+      }
+      .hobbies > li:nth-child(4) {
+        color: goldenrod;
+      }
+      .hobbies > li:nth-child(5) {
+        color: slateblue;
+      }
+*/
+      /*we can color them in even odd format and by using arthematic progression */
+      .hobbies > li:nth-child(odd) {
+        color: slateblue;
+      }
+
+      .hobbies > li:nth-child(even) {
+        color: rebeccapurple;
+      }
+      /* 
+ul.hobbies > li:nth-child(even) {
+        color: rebeccapurple;
+      }
+        Here we added ul to be more specific about tag.
+     
+      .hobbies > li:nth-child(2n + 3) {
+        color: rebeccapurple;
+      }
+        */
+    </style>
+  </head>
+  <body>
+    <!--To put an icon we use this which is from font awesome icons -->
+    <p class="ticks"><i class="fa-sharp fa-solid fa-check"></i>I am text</p>
+    <ul class="hobbies">
+      <li><i class="fa-solid fa-bowl-food"></i> Cooking</li>
+      <li><i class="fa-solid fa-tv"></i> Watching TV</li>
+      <li><i class="fa-solid fa-compass-drafting"></i> Crafting</li>
+      <li><i class="fa-solid fa-palette"></i> Painting</li>
+      <li><i class="fa-solid fa-child"></i> Dancing</li>
+    </ul>
+  </body>
+</html>

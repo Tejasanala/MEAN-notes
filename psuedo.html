@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 20px;
+        min-height: 100vh;
+        display: grid;
+        place-content: center;
+      }
+      .container {
+        height: 300px;
+        width: 300px;
+        background-color: teal;
+        /*animate all properties of .container*/
+        transition: all 0.7s;
+      }
+
+      /*it is activating by the over*/
+      .container:hover {
+        /*
+        transform: rotate(360deg) scale(1.5);
+        border-radius: 50%;
+        */
+        transition: all 0.5s ease-in-out; /*it deals with the accelaration of our moment i.e hover works in a rythmn*/
+        background: palevioletred;
+        cursor: pointer; /*gets the hand pointer on the container*/
+      }
+      /*It is activating by the click*/
+      /*keys (new concept learn*/
+
+      .container:active {
+        transform: scale(0.9);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container"></div>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 0;
+        min-height: 100vh;
+        place-content: center;
+      }
+      .pricing-card,
+      .Base,
+      .Enterprise {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: color 0.3s ease;
+      }
+      .Pro {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: color 0.3s ease;
+        position: relative;
+      }
+      .pricing-card:hover {
+        background-color: #220355;
+        color: white;
+      }
+      .Base:hover {
+        background-color: #220355;
+        color: white;
+      }
+      .Pro:hover {
+        background-color: #220355;
+        color: white;
+      }
+      .Enterprise:hover {
+        background-color: #220355;
+        color: white;
+      }
+
+      .list {
+        list-style-type: none;
+        padding: 0;
+      }
+      .fade-out {
+        opacity: 20%;
+      }
+
+      .list li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+
+      .list li i {
+        margin-right: 13px;
+      }
+
+      .price {
+        margin-top: 28px;
+      }
+
+      .btn {
+        background-color: #8937c4;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        height: 35px;
+        width: 146px;
+        margin-top: 20px;
+      }
+
+      .btn:hover {
+        background-color: #4a0dad;
+      }
+      span {
+        color: gray;
+        font-size: 15px;
+        font-family: sans-serif;
+      }
+      .save {
+        border-radius: 5px;
+        background-color: white;
+        color: #8937c4;
+        font-size: 16px;
+        width: 80px;
+        height: 23px;
+        text-align: center;
+        position: absolute;
+        right: 28px;
+        cursor: pointer;
+        margin: 0;
+        place-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pricing-card">
+      <h2>Intro</h2>
+      <ul class="list">
+        <li>
+          <i class="fa-solid fa-check"></i>Upload Video up to 720p Resolution
+        </li>
+        <div class="fade-out">
+          <li><i class="fa-solid fa-xmark"></i>Attachment & Post Scheduling</li>
+          <li><i class="fa-solid fa-xmark"></i>Set your rates</li>
+          <li><i class="fa-solid fa-xmark"></i>Exclusive Deals</li>
+          <li><i class="fa-solid fa-xmark"></i>Advanced Statistics</li>
+        </div>
+      </ul>
+
+      <h2 class="price">$123<span>/month</span></h2>
+      <button class="btn">Choose</button>
+    </div>
+
+    <div class="Base">
+      <h2>Base</h2>
+      <ul class="list">
+        <li>
+          <i class="fa-solid fa-check"></i>Upload Video up to 720p Resolution
+        </li>
+        <li><i class="fa-solid fa-xmark"></i>Attachment & Post Scheduling</li>
+        <div class="fade-out">
+          <li><i class="fa-solid fa-xmark"></i>Set your rates</li>
+          <li><i class="fa-solid fa-xmark"></i>Exclusive Deals</li>
+          <li><i class="fa-solid fa-xmark"></i>Advanced Statistics</li>
+        </div>
+      </ul>
+
+      <h2 class="price">$123<span>/month</span></h2>
+      <button class="btn">Choose</button>
+    </div>
+
+    <div class="Pro">
+      <div class="save">Save$40</div>
+      <h2>Pro</h2>
+      <ul class="list">
+        <li>
+          <i class="fa-solid fa-check"></i>Upload Video up to 720p Resolution
+        </li>
+        <li><i class="fa-solid fa-xmark"></i>Attachment & Post Scheduling</li>
+        <li><i class="fa-solid fa-xmark"></i>Set your rates</li>
+        <li><i class="fa-solid fa-xmark"></i>Exclusive Deals</li>
+        <div class="fade-out">
+          <li><i class="fa-solid fa-xmark"></i>Advanced Statistics</li>
+        </div>
+      </ul>
+
+      <h2 class="price">$123<span>/month</span></h2>
+      <button class="btn">Try 1 month free</button>
+    </div>
+
+    <div class="Enterprise">
+      <h2>Enterprise</h2>
+      <ul class="list">
+        <li>
+          <i class="fa-solid fa-check"></i>Upload Video up to 720p Resolution
+        </li>
+        <li><i class="fa-solid fa-xmark"></i>Attachment & Post Scheduling</li>
+        <li><i class="fa-solid fa-xmark"></i>Set your rates</li>
+        <li><i class="fa-solid fa-xmark"></i>Exclusive Deals</li>
+        <li><i class="fa-solid fa-xmark"></i>Advanced Statistics</li>
+      </ul>
+      <h2 class="price">$123<span>/month</span></h2>
+      <button class="btn">Choose</button>
+    </div>
+  </body>
+</html>
